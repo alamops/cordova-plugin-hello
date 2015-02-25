@@ -1,6 +1,6 @@
-#import "HWPHello.h"
+#import "SQLiteHelper.h"
 
-@implementation HWPHello
+@implementation SQLiteHelper
 
 - (void)greet:(CDVInvokedUrlCommand*)command
 {

@@ -1,45 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="com.example.hello"
+        id="br.com.alamoweb.sqlitehelper"
         version="0.7.0">
 
-  <name>Hello</name>
+  <name>SQLiteHelper</name>
 
   <engines>
     <engine name="cordova" version=">=3.4.0"/>
   </engines>
 
-  <asset src="www/hello.js" target="js/hello.js"/>
+  <asset src="www/sqlitehelper.js" target="js/sqlitehelper.js"/>
 
-  <js-module src="www/hello.js" name="hello">
-    <clobbers target="hello" />
+  <js-module src="www/sqlitehelper.js" name="sqlitehelper">
+    <clobbers target="sqlitehelper" />
   </js-module>
 
   <platform name="android">
 
     <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="Hello">
-        <param name="android-package" value="com.example.plugin.Hello"/>
+      <feature name="SQLiteHelper">
+        <param name="android-package" value="br.com.alamoweb.plugin.SQLiteHelper"/>
       </feature>
     </config-file>
 
-    <source-file src="src/android/Hello.java" target-dir="src/com/example/plugin/"/>
+    <source-file src="src/android/SQLiteHelper.java" target-dir="src/br/com/alamoweb/plugin/"/>
   </platform>
 
   <platform name="ios">
     
     <config-file target="config.xml" parent="/widget">
-      <feature name="Hello">
-        <param name="ios-package" value="HWPHello" />
+      <feature name="SQLiteHelper">
+        <param name="ios-package" value="SQLiteHelper" />
       </feature>
     </config-file>
 
-    <header-file src="src/ios/HWPHello.h" target-dir="HelloPlugin"/>
-    <source-file src="src/ios/HWPHello.m" target-dir="HelloPlugin"/>
-  </platform>
-
-  <platform name="wp7">
-    <source-file src="src/wp7/Hello.cs"/>
+    <header-file src="src/ios/SQLiteHelper.h" target-dir="SQLiteHelper"/>
+    <source-file src="src/ios/SQLiteHelper.m" target-dir="SQLiteHelper"/>
   </platform>
 
 </plugin>
