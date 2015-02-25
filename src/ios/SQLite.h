@@ -1,6 +1,6 @@
 #import <Cordova/CDV.h>
 
-@interface SQLiteHelper : CDVPlugin
+@interface SQLite : CDVPlugin
 
 - (void) greet:(CDVInvokedUrlCommand*)command;
 

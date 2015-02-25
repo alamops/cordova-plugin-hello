@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="br.com.alamoweb.sqlitehelper"
+        id="br.com.alamoweb.sqlite"
         version="0.7.0">
 
-  <name>SQLiteHelper</name>
+  <name>SQLite</name>
 
   <engines>
     <engine name="cordova" version=">=3.4.0"/>
   </engines>
 
-  <asset src="www/sqlitehelper.js" target="js/sqlitehelper.js"/>
+  <asset src="www/sqlite.js" target="js/sqlite.js"/>
 
-  <js-module src="www/sqlitehelper.js" name="sqlitehelper">
-    <clobbers target="sqlitehelper" />
+  <js-module src="www/sqlite.js" name="sqlite">
+    <clobbers target="sqlite" />
   </js-module>
 
   <platform name="android">
 
     <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="SQLiteHelper">
-        <param name="android-package" value="br.com.alamoweb.plugin.SQLiteHelper"/>
+      <feature name="SQLite">
+        <param name="android-package" value="br.com.alamoweb.plugin.SQLite"/>
       </feature>
     </config-file>
 
-    <source-file src="src/android/SQLiteHelper.java" target-dir="src/br/com/alamoweb/plugin/"/>
+    <source-file src="src/android/SQLite.java" target-dir="src/br/com/alamoweb/plugin/"/>
   </platform>
 
   <platform name="ios">
     
     <config-file target="config.xml" parent="/widget">
-      <feature name="SQLiteHelper">
-        <param name="ios-package" value="SQLiteHelper" />
+      <feature name="SQLite">
+        <param name="ios-package" value="SQLite" />
       </feature>
     </config-file>
 
-    <header-file src="src/ios/SQLiteHelper.h" target-dir="SQLiteHelper"/>
-    <source-file src="src/ios/SQLiteHelper.m" target-dir="SQLiteHelper"/>
+    <header-file src="src/ios/SQLite.h" target-dir="SQLite"/>
+    <source-file src="src/ios/SQLite.m" target-dir="SQLite"/>
   </platform>
 
 </plugin>
